@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>popup_notice</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/ress.min.css">
+
+	<style>
+		body{
+			margin:0;
+		}
+		#popup-wrap{
+			display: block;
+			position: absolute;
+		 	top: 0;
+		 	bottom: 0;
+		 	left: 0;
+		 	right: 0;
+		 	width: 870px;
+			height: 700px;
+		 	margin: auto;
+  			background-image: url(img/com_pop03_bg.png);
+  			cursor: pointer;
+		}
+		ul li {list-style-type: none;}
+  		a:hover { color: #7b7b7b; text-decoration: none;}
+
+
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+	<script>
+    // html dom 이 다 로딩된 후 실행된다.
+    $(document).ready(function(){
+        // memu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+        $(".popup-list  a").click(function(){
+            // 현재 클릭한 태그가 a 이기 때문에
+            // a 옆의 태그중 ul 태그에 hide 클래스 태그를 넣던지 빼던지 한다.
+            $(this).next("ul").toggleClass("show");
+        });
+    });
+	</script> 
+
+</head>
+
+<body>
+	<div id="popup-wrap">
+		<button type="button" class="btn-close">
+			<img src="img/com_btn_x02_nor.png">
+		</button>
+		<div id="container">
+			<ul class="popup-list">
+	    		<li><a href="#">공지사항 제목1 (최대 한글 28자)<span>2020.02.22</span></a>
+	    			<ul class="notice-container">
+	    				<li>
+	    					공지사항 내용영역이 텍스트만 나오는 경우에는 행간 14px 입니다.
+	                		공지사항 내용영역은 이미지가 들어올 수도 있습니다. 가로 720px 세로 무한대요.
+	                		독서 활동과 교구 활동, 애플리케이션을 통한 학습을 스마트하게 연계하여 흥미롭고 효과적인 코딩 학습이 가능한 전집 독서 활동과 교구 활동, 애플리케이션을 통한 학습을 스마트하게 연계하여 흥미롭고 효과적인 코딩 학습이 가능한 전집독서 활동과 교구 활동, 애플리케이션을 통한 학습을 스마트하게 연계하여 흥미롭고 효과적인 코딩 학습이 가능한 전집독서 활동과 교구 활동, 애플리케이션을 통한 학습을 스마트하게 연계하여 흥미롭고 효과적인 코딩 학습이 가능한 전집독서 활동과 교구 활동, 애플리케이션을 통한 학습.
+	    				</li>
+	    			</ul>
+	    		</li>
+	    		<li><a href="#">공지사항 제목2 (최대 한글 28자)<span>2020.02.23</span></a></li>
+	    		<li><a href="#">공지사항 제목3 (최대 한글 28자)<span>2020.02.24</span></a></li>
+	    		<li><a href="#">공지사항 제목4 (최대 한글 28자)<span>2020.02.25</span></a></li>
+	    		<li><a href="#">공지사항 제목5 (최대 한글 28자)<span>2020.02.26</span></a></li>
+	    		<li><a href="#">공지사항 제목6 (최대 한글 28자)<span>2020.02.27</span></a></li>
+	    		<li><a href="#">공지사항 제목7 (최대 한글 28자)<span>2020.02.27</span></a></li>
+	    		<li><a href="#">공지사항 제목8 (최대 한글 28자)<span>2020.02.28</span></a></li>
+	    		<li><a href="#">공지사항 제목9 (최대 한글 28자)<span>2020.02.28</span></a></li>
+				<!--li 안에 제목과 span 안에 날짜만 바뀝니다-->
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
